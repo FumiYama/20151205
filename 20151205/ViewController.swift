@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         
         let cv_childView = UIView(frame: CGRectMake(0, CGFloat(UIScreenUtil.sh_screenHeight()/2), CGFloat(UIScreenUtil.sw_screenWidth()/2), CGFloat(UIScreenUtil.sh_screenHeight()/2)))
         cv_childView.backgroundColor = UIColor(hue: 0.6, saturation: 1, brightness: 1, alpha: 0.8)
+
         
         cv_childView.addSubview(testDraw)
         pv_parentView.addSubview(cv_childView)
@@ -94,6 +95,10 @@ class ViewController: UIViewController {
         button.setTitle("button", forState: .Normal)
 //        button.backgroundRectForBounds(0.5)
         button.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
+        button.layer.shadowOpacity = 0.5 //shadowの透明度
+        button.layer.shadowOffset = CGSizeMake(5, 5) // shadowの大きさ, xy方向に伸びる
+        button.layer.shadowRadius = 10
+        button.layer.shadowColor = UIColor.redColor().CGColor
         
         pv_parentView.addSubview(button)
 
