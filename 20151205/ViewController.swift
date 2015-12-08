@@ -97,8 +97,8 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor(white: 0.5, alpha: 1.0)
         button.layer.shadowOpacity = 0.5 //shadowの透明度
         button.layer.shadowOffset = CGSizeMake(5, 5) // shadowの大きさ, xy方向に伸びる
-        button.layer.shadowRadius = 10
-        button.layer.shadowColor = UIColor.redColor().CGColor
+        button.layer.shadowRadius = 10 // 影のぼかし(blur)の効果に影響する値
+        button.layer.shadowColor = UIColor.redColor().CGColor //影色
         
         pv_parentView.addSubview(button)
 
